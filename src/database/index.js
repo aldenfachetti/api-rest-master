@@ -4,7 +4,8 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/noderest', {
     useCreateIndex: true,
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false
 })
 .then(() => console.log('Running...'))
 .catch(err =>console.log(err));
